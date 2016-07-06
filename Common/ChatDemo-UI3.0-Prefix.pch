@@ -1,0 +1,111 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#define REDPACKET_AVALABLE
+//前面IM需要的头文件
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "ChatDemoUIDefine.h"
+    #import "EMAlertView.h"
+    #import "TTGlobalUICommon.h"
+
+    #import "EMSDKFull.h"
+    #import "EaseUI.h"
+
+#define DEMO_CALL 1
+
+
+//后面的页面需要的头文件
+#import <MediaPlayer/MediaPlayer.h>
+
+//#import "Tools.h"
+//#import "StringConstants.h"
+
+/**
+ *  页面
+ */
+
+#import "MainViewController.h"
+
+#import "ReadViewController.h"
+#import "AudioVisualViewController.h"
+
+//#import "MyViewController.h"
+#import "MBProgressHUD.h"
+
+/**
+ *  三方库
+ */
+
+//#import "UIButton+WebCache.h"
+#import "AFNetworking.h"
+#import "AFSoundManager.h"
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "SDCycleScrollView.h"
+//#ifdef SD_WEBP
+//#import "UIImage+WebP.h"
+//#endif
+/**
+ *  工具
+ */
+//#import "ButtonSize.h"
+
+/**
+ *  网络
+ */
+#import "DownloadManager.h"
+#define API_NEWS_PICS @"http://c.3g.163.com/nc/ad/headline/android/0-4.html"
+#define API_NEWS @"http://c.m.163.com/nc/article/list/%@/0-%d.html"
+#define API_READ @"http://c.3g.163.com/recommend/getSubDocPic?passport=&devId=860806021047179&size=%d&version=5.3.0&from=yuedu"
+#define API_MYREAD @"http://c.3g.163.com/nc/topicset/subscribe/recommend.html"
+#define API_ICON @"http://s.cimg.163.com/pi/img3.cache.netease.com/m/newsapp/topic_icons/%@.png.134x2147483647.75.auto.webp"
+#define API_VISUAL @"http://c.3g.163.com/nc/video/home/%d-10.html"
+#define API_AUDIO @"http://c.m.163.com/nc/topicset/ios/radio/index.html"
+#define API_MP3 @"http://c.3g.163.com/nc/article/%@/full.html"
+#define API_AUDIOICON @"http://s.cimg.163.com/pi/img3.cache.netease.com/m/newsapp/topic_icons/%@.png.64x2147483647.75.auto.webp"
+#define API_MUSIC @"http://c.3g.163.com/nc/article/list/%@/0-%d.html"
+
+#define API_FOUND @"http://c.m.163.com/nc/topicset/uc/api/discovery/indexV52"
+#define API_DETAIL @"http://c.3g.163.com/nc/article/%@/full.html"
+/*
+ 通知
+ */
+
+
+/**
+ *  模型
+ */
+#import "JSONModelLib.h"
+#define __KPropertyString(key) @property(nonatomic,copy)NSString *key;
+
+/**
+ *  尺寸
+ */
+
+#define WIDTH [[UIScreen mainScreen] bounds].size.width
+#define HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define NAVHEIGHT (CGRectGetHeight(self.navigationController.navigationBar.frame)+10)
+#define FONTMAXSIZE 17.f
+#define FONTMINSIZE 14.f
+/**
+ *  按钮间距
+ */
+#define FONTOFFSET 20.f
+
+/*
+ */
+#define LIGHTCOLOR [UIColor colorWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1]
+#endif
